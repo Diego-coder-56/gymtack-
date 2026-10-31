@@ -1,0 +1,23 @@
+{
+  "name": "gymtrack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GYMTRACK — plataforma para entrenadores (Netlify + Supabase)",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/server.js",
+    "dev": "node --env-file-if-exists=.env --watch server/server.js",
+    "trainer": "node --env-file-if-exists=.env server/cli.js",
+    "db:init": "node --env-file-if-exists=.env scripts/db-init.mjs",
+    "test": "node --test test/api.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "serverless-http": "^3.2.0",
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}
